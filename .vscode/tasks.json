@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C++: Compile and run with input.txt",
+            "type": "shell",
+            "command": "g++ -std=gnu++17 -O2 -pipe -Wall -Wextra \"${file}\" -o \"%TEMP%\\cp-${fileBasenameNoExtension}.exe\" && \"%TEMP%\\cp-${fileBasenameNoExtension}.exe\" < \"${workspaceFolder}\\input.txt\" > \"${workspaceFolder}\\output.txt\"",
+            "options": {
+                "shell": {
+                    "executable": "C:\\Windows\\System32\\cmd.exe",
+                    "args": ["/d", "/c"]
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$gcc",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "clear": true
+            }
+        }
+    ]
+}
